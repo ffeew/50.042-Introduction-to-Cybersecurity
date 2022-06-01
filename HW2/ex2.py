@@ -1,5 +1,5 @@
 # Lab 2 Part II OTP
-
+# Completed by Koh Aik Hong (1005139)
 import os
 import base64
 
@@ -37,10 +37,9 @@ print(decrypt(original_cipher, OTP))
 
 
 def hax():
-    # TODO: manipulate ciphertext to decrypt to:
-    # "Student ID 100XXXX gets 4 points"
-    # Remember your goal is to modify the encrypted message
-    # therefore, you do NOT decrypt the message here
+    new_msg = b"Student ID 1000000 gets 4 points\n"
+    mask = XOR(new_msg, original_plaintext)
+    new_cipher = XOR(original_cipher, mask)
     return new_cipher
 
 
