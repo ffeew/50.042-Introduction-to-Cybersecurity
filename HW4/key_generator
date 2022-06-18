@@ -1,0 +1,7 @@
+import secrets
+
+number_of_bits = 80
+key_length = number_of_bits//8
+
+with open("keyfile", "wb") as keyfile:
+    keyfile.write(secrets.token_bytes(key_length))
