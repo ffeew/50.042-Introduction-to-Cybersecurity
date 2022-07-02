@@ -1,0 +1,9 @@
+Question 1: How could we perform the exchange of keys in the real world? Do we need a secure channel? Why or why not?
+Answer: we can use the Diffie-Hellman Key Exchange protocol to exchange keys in the real world. No secure channel is needed since it is very difficult for an attacker to obtain the shared key by knowing the public key sent to each other. 
+
+Question 2: What is an advantage and a disadvantage of DHKE?
+Advantage: a shared secret key can be established over an insecure channel.
+Disadvantage: The algorithm can not be used for any asymmetric key exchange.
+
+Question 3: To avoid attack using Baby-Step Giant-Steps method, how many bits would you set the key be in DHKE protocol? How did you decide on this number?
+Answer: I would set the key to be at least 72 bits. Plotting the key_len against log(duration) gives a relatively straight line. Using that line, I calculated the number of bits needed for the key to last 1 month before it can be cracked.
