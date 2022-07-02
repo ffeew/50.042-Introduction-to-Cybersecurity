@@ -1,0 +1,17 @@
+1. There is no difference between addition and subtraction operation for all elements of GF(3).
+Answer: False. Possible values in GF(3) = {0, 1, 2}. Assume a = 2, b = 1. 
+a + b = 0 while a - b = 1. 
+Therefore, (a+b) != (a-b), illustrating the difference between addition and subtraction in GF(3)
+
+2. There is no difference between addition and subtraction operation for all elements of GF(2^N), for any integer N.
+Answer: True.  0-1 and 0+1 are the same in GF(2) since -1 = 1 = 1 mod 2. Since the values in GF(2^N) can be illustrated using a binary representation, subtraction and addition are just bitwise XORs of the corresponding bits.
+
+3. For all elements of GF(2), multiplication is equivalent to an AND gate.
+Answer: True. Possible values in GF(2) = {0, 1}. 0*0=0, 0*1=0, 1*0=0,1*1=1.
+Therefore, the results of the multiplication operation has the same results as the truth table of an AND gate.
+
+4. A polynomial of degree 8 is a possible element of the field GF(2^8).
+Answer: False. The max degree of the polynomial in GF(2^8) is only 7.
+
+5. P(x) = x^4 + x^3 + x + 1 is a irreducible polynomial.
+Answer: False. P(x) = (x+1)*(x^3+1) = (x+1)^2 * (x^2 -x +1). Therefore, P(x) is reducible.
