@@ -4,7 +4,6 @@
 from present import *
 import argparse
 import secrets
-from cryptography.hazmat.primitives import padding
 
 nokeybits=80
 blocksize=64 # 64 bits block length = 8 bytes
@@ -40,7 +39,7 @@ def ecb(infile,outfile,keyfile,mode):
         # 16 bytes result after PKCS#7 padding
         block = fin.read(8*2)
         while block:
-            # out = b''
+            out = b''
             for i in range(len(block)//8):
                 subBlock = int.from_bytes(block[i*8 : (i+1)*8], "big")
                 decrypted_subBlock = present_inv(subBlock, key)
