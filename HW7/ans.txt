@@ -1,0 +1,4 @@
+The protocol attack did not work with the new RSA due to difference in the ciphertext length.
+
+Limitation of RSA protocol attacks:
+They only work on the textbook RSA protocol. RSA with padding is able to eliminate the 
